@@ -115,4 +115,12 @@ const gameObject = function() {
   }
   return nestedObj;
 }
-console.log(gameObject());
+
+const teamNames = function() {
+  let object = gameObject()
+  let teamArray = [object.home.teamName, object.away.teamName]
+
+  return teamArray
+}
+console.log(teamNames())
+debugger
