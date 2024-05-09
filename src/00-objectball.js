@@ -1,4 +1,4 @@
-const gameObject = function() {
+ const gameObject = function() {
   let nestedObj = {
     home: {
       teamName: "Brooklyn Nets",
@@ -116,11 +116,22 @@ const gameObject = function() {
   return nestedObj;
 }
 
+const numPointsScored = function(name) {
+  let usedObject = gameObject()
+
+  if (usedObject.home.players[name]) {
+    return usedObject.home.players[name].points;
+   } else if (usedObject.home.players[name]) {
+      return usedObject.home.players[name].points;
+   } else {
+    return "nothing";
+   }
+  }
+
 const teamNames = function() {
   let object = gameObject()
   let teamArray = [object.home.teamName, object.away.teamName]
 
   return teamArray
 }
-console.log(teamNames())
-debugger
+
